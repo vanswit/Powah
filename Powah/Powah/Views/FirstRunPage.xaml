@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Powah"
+             x:Class="Powah.FirstRunPage">
+    <ContentPage.BindingContext>
+        <local:FirstRunPageViewModel>
+          
+        </local:FirstRunPageViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" FontSize="20">Personal Data</Label>
+            <Label x:Name="UserNameLabel">Username</Label>
+            <Entry x:Name="UserNameEntry" Text="{Binding UserName, Mode=OneWayToSource}"></Entry>
+            <Label x:Name="AgeLabel">Age</Label>
+            <Entry x:Name="AgeEntry" Text="{Binding Age, Mode=OneWayToSource}"></Entry>
+            <Label x:Name="WeigthLabel">Weigth</Label>
+            <Entry x:Name="WeigthEntry" Text="{Binding Weigth, Mode=OneWayToSource}"></Entry>
+            <Label x:Name="Squat1RMLabel">Squat 1RM</Label>
+            <Entry x:Name="Squat1RMEntry" Text="{Binding SquatMax, Mode=OneWayToSource}"></Entry>
+            <Label x:Name="BenchPress1RMLabel">Bench press 1RM</Label>
+            <Entry x:Name="BenchPress1RMEntry" Text="{Binding FlatbenchMax, Mode=OneWayToSource}"></Entry>
+            <Label x:Name="DeadLift1RMLabel">Deadlift 1RM</Label>
+            <Entry x:Name="Deadlift1RMEntry" Text="{Binding DeadliftMax, Mode=OneWayToSource}"></Entry>
+            <Button Text="Save" Command="{Binding SaveCommand}" x:Name="SaveButton"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

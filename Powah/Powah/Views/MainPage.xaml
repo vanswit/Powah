@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Powah"
+             x:Class="Powah.MainPage">
+    <ContentPage.BindingContext>
+        <local:MainPageViewModel></local:MainPageViewModel>
+    </ContentPage.BindingContext>
+    <StackLayout Padding="10">
+        <StackLayout Padding="10" VerticalOptions="Start">
+            <Label Text="Powah" 
+           HorizontalOptions="Center"
+               Margin="0,0,0,10" FontSize="25"/>
+        </StackLayout>
+        <StackLayout Padding="10" VerticalOptions="CenterAndExpand">
+            <Button Text="5 3 1" x:Name="FiveThreeOneButton"></Button>
+            <Button Text="Cube" x:Name="CubeButton"></Button>
+            <Button Text="5 X 5" x:Name="FiveByFiveButton"></Button>
+            <Button Text="Texas method" x:Name="TexasButton"></Button>
+        </StackLayout>
+        <StackLayout Padding="10" VerticalOptions="End">
+            <Button Text="General Settings" x:Name="GeneralSettingsButton" BackgroundColor="Gold" TextColor="Black" Command="{Binding GeneralSettingsCommand}"></Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
